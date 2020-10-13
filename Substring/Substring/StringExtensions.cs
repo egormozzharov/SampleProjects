@@ -6,11 +6,6 @@ namespace Substring
     {
         public static int MySubstring(this string sourceString, string substring)
         {
-            if (sourceString.Length < substring.Length)
-            {
-                return -1;
-            }
-
             for (int i = 0; i < sourceString.Length - (substring.Length - 1); i++)
             {
                 if (IsSubstring(sourceString, substring, i))

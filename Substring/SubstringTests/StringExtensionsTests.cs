@@ -10,6 +10,9 @@ namespace SubstringTests
         [TestCase("String in which substring", "in", 3)]
         [TestCase("String in which substring", "which", 10)]
         [TestCase("String in which substring", "substring", 16)]
+        [TestCase("substring", "verylongsubstring", -1)]
+        [TestCase("", "", 0)]
+        [TestCase("aaaaaa", "bb", -1)]
 
         public void ShouldReturnCorrectIndex(string testString, string substring, int expected)
         {
@@ -18,16 +21,6 @@ namespace SubstringTests
 
             // Assert
             Assert.AreEqual(expected, actualResult);
-        }
-
-        [TestCase("substring", "verylongsubstring")]
-        public void ShouldReturnNotFoundIndexIfSubstringIsLongerThanSourceString(string testString, string substring)
-        {
-            // Act
-            int actualResult = testString.MySubstring(substring);
-
-            // Assert
-            Assert.AreEqual(-1, actualResult);
         }
     }
 }
