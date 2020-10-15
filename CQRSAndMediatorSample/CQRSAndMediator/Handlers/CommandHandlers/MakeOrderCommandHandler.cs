@@ -7,7 +7,7 @@ using MediatR;
 
 namespace CQRSAndMediator.Handlers.CommandHandlers
 {
-    public class MakeOrderCommandHandler: IRequestHandler<MakeOrderRequestModel , MakeOrderResponseModel>
+    public class MakeOrderCommandHandler: IRequestHandler<MakeOrderRequestModel, MakeOrderResponseModel>
     {
         public async Task<MakeOrderResponseModel> Handle(MakeOrderRequestModel request, CancellationToken cancellationToken)
         {
